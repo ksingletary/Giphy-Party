@@ -22,7 +22,7 @@ $("form").on("submit", async function(e) {
     const res = await axios.get("http://api.giphy.com/v1/gifs/random", {
         params: {
         tag: $inptVal,
-        api_key: "5aTZb37JarXQWEHZFuQV04LsfrSjMBEr",
+        api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym",
         limit: 25
         }
     });
