@@ -31,11 +31,6 @@ input[type=text]{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#delete {
-    display: inline-block;
-}
-
-
 button {
     background-color: rgb(200, 219, 246);
     padding: 8px 8px;
