@@ -11,6 +11,10 @@ const inpt = $('input');
 
 $("form").on("submit", async function(e) {
     e.preventDefault();
+    if (inpt.val() === ''){
+        alert('You must enter something!');
+        throw new Error("Did not satisfy input requirement");
+    }
 
     let $inptVal = $('input').val();
     inpt.val('');
@@ -33,4 +37,8 @@ function appendImg(res){
     gifcontainer.append($img);
 }
 
+$("#delete").on("click", function(e){
+    e.preventDefault();
+    $('img').remove();
+})
 
