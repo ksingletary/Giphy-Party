@@ -15,21 +15,21 @@ $("form").on("submit", async function(e) {
     let $inptVal = $('input').val();
     inpt.val('');
     
-    const res = await axios.get("http://api.giphy.com/v1/gifs/search", {
+    const res = await axios.get("http://api.giphy.com/v1/gifs/random", {
         params: {
-        q: $inptVal,
+        tag: $inptVal,
         api_key: "5aTZb37JarXQWEHZFuQV04LsfrSjMBEr",
-        limit: 100
+        limit: 25
         }
     });
     appendImg(res);
-    console.log(res.data.data[0].images.original.url);
+    console.log(res.data.data.images.original.url);
 });    
 
 
 function appendImg(res){
     let $img = $('<img>');
-    $img.attr('src', res.data.data[0].images.original.url);
+    $img.attr('src', res.data.data.images.original.url);
     gifcontainer.append($img);
 }
 
